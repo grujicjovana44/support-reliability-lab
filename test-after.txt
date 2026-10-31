@@ -1,0 +1,12 @@
+✔ selects the active document when the archived document comes first (0.644416ms)
+✔ selects the active document when it comes first (0.066583ms)
+✔ refuses when only archived documents exist for the topic (0.049958ms)
+✔ refuses when the only active document belongs to another topic (0.04675ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.768791
