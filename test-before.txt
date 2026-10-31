@@ -1,0 +1,56 @@
+✖ selects the active document when the archived document comes first (1.162709ms)
+✔ selects the active document when it comes first (0.353333ms)
+✖ refuses when only archived documents exist for the topic (0.101458ms)
+✔ refuses when the only active document belongs to another topic (0.050583ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 35.794917
+
+✖ failing tests:
+
+test at tests/source-eligibility.test.mjs:34:1
+✖ selects the active document when the archived document comes first (1.162709ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Policy: Returns are accepted within 30 days.'
+  - 'Policy: Returns are accepted within 10 days.'
+  
+      at TestContext.<anonymous> (file:///Users/jovanagrujic/Desktop/AI%20Bootcamp/zadaci/week9/support-reliability-lab/tests/source-eligibility.test.mjs:38:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Policy: Returns are accepted within 30 days.',
+    expected: 'Policy: Returns are accepted within 10 days.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/source-eligibility.test.mjs:56:1
+✖ refuses when only archived documents exist for the topic (0.101458ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'ok' !== 'refused'
+  
+      at TestContext.<anonymous> (file:///Users/jovanagrujic/Desktop/AI%20Bootcamp/zadaci/week9/support-reliability-lab/tests/source-eligibility.test.mjs:59:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'ok',
+    expected: 'refused',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
